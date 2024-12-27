@@ -11,14 +11,14 @@ def read_references():
         out[t] = {}
         for ds in ['HVLM', 'LVHM']:
             out[t][ds] = defaultdict(lambda: 0)
-            file_name = f'datasets/{t}_SMT2020_{ds}.txt'
-            with io.open(file_name, 'r') as f:
-                lines = f.read().split('\n')
-                headers = lines[0].split(' ')
-                rows = [a.split(' ') for a in lines[1:]]
-                for row in rows:
-                    for h, c in zip(headers[1:], row[1:]):
-                        out[t][ds][(h, row[0])] = c
+            #file_name = f'datasets/{t}_SMT2020_{ds}.txt'
+            # with io.open(file_name, 'r') as f:
+            #     lines = f.read().split('\n')
+            #     headers = lines[0].split(' ')
+            #     rows = [a.split(' ') for a in lines[1:]]
+            #     for row in rows:
+            #         for h, c in zip(headers[1:], row[1:]):
+            #             out[t][ds][(h, row[0])] = c
     return out
 
 
